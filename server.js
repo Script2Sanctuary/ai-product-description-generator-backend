@@ -26,6 +26,10 @@ const geminiModel = googleAI.getGenerativeModel({
   geminiConfig,
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Gemini API");
+});
+
 app.post("/api/generate-description", async (req, res) => {
   const { productName } = req.body;
 
